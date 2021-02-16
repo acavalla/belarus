@@ -3,18 +3,31 @@
 <head>
   <title> BelarusNoteTaker </title>
   <link href="./public/harrystyles.css" rel="stylesheet"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 </head>
 <body>
-  New note
+  <div class="marquee">
+    <h3>Belarus</h3>
+  </div>
+<header>
+  <h1>Notes</h1>
+</header>
+
 <div id="create">
   <form>
-    <input id="stupidnote" type="text" name="new-note" placeholder="Write your stupid little note here"></br>
+    <textarea id="stupidnote" placeholder="Write your stupid little note here" name='new-note'></textarea></br>
     <input id="submit-button" type="button" value="submit">
   </form>
 </div>
 
 <div id="list-all"> </div>
 <!-- <div id="list-new"> </div> -->
+
+
+<div class="marquee marquee2">
+  <h3>Belarus</h3>
+</div>
 
 <script src="./src/Note.js"> </script>
 <script src="./src/List.js"> </script>
