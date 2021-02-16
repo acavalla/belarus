@@ -9,4 +9,6 @@ class List {
   }
 
   showNotes = () => this._allNotes
+
+  newestNote = () => this._allNotes[this._allNotes.length - 1]
 }
