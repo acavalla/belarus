@@ -15,14 +15,19 @@ header {
   font-family: 'Parisienne', cursive;
   font-size: 64px;
   text-shadow: 6px 6px #555;
+
+}
+
+h1 {
+  margin: 0px 0px;
 }
 
 textarea {
   width: 40%;
-  background-color: #EDFFAB;
+  background-color: #111;
   height: 240px;
   padding: 12px;
-  color: #222;
+  color: white;
   border: 5px solid #555;
   outline: none;
   resize:none;
@@ -39,11 +44,32 @@ body {
 }
 
 #list-all {
-  margin-top: 12px;
+  text-decoration: none;
   font-family: 'Parisienne', cursive;
   font-size:36px;
+
 }
 
+#list-all a {
+  color: white;
+  text-decoration: underline;
+}
+
+#printed-note {
+  margin-top: 12px;
+  font-family: 'Parisienne', cursive;
+  font-size: 36px;
+}
+
+#printed-note div {
+  padding: 15px;
+  background-color: #111;
+  border-color: blue;
+  border-radius: 25px;
+  border-width: 20px;
+  color: white;
+
+}
 
 .marquee {
  height: 50px;

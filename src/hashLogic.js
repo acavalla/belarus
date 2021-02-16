@@ -9,6 +9,7 @@ function showNoteForCurrentPage() {
 };
 
 function getNoteFromUrl(location) {
+  console.log(location)
   a = location.hash.split("#")[1];
   return list.showNotes()[a - 1];
 };
@@ -16,5 +17,5 @@ function getNoteFromUrl(location) {
 function showNote(note) {
   document
     .getElementById("printed-note")
-    .innerHTML = note.text();
+    .innerHTML = '<div class="print">' + note.text() + '</div>';
 };
