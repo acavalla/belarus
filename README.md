@@ -19,3 +19,12 @@ As a programmer
 So I can record notes with fun little pictures
 I want to use shortcodes like `:fire:` that get converted into emojis like 🔥
 ```
+
+
+TO DO
+
+- Abbreviate each note
+- Refresh the notepad after a note is added
+- User story 3
+- User story 4
+- Submitted notes to be styled
