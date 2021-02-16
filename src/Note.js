@@ -11,5 +11,8 @@ class Note {
     return this._text;
   }
 
+  abbreviate(){
+    return this._text.substring(0,5);
+  }
 
 }
