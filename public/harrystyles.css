@@ -62,6 +62,12 @@ body {
 
  animation: marquee 7s linear infinite alternate;
 }
+.marquee2 {
+  bottom: 0px;
+}
+.marquee2 h3 {
+  animation: marqueeReverse 7s linear infinite alternate;
+}
 
 @keyframes marquee {
  0%   {
@@ -69,5 +75,14 @@ body {
  }
  100% {
  transform: translateX(0%);
+ }
+}
+
+@keyframes marqueeReverse {
+ 0%   {
+ transform: translateX(0%);
+ }
+ 100% {
+ transform: translateX(100%);
  }
 }
