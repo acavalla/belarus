@@ -1,0 +1,22 @@
+{
+  "name": "belarus",
+  "version": "1.0.0",
+  "description": "belarus",
+  "main": "interface.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acavalla/belarus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acavalla/belarus/issues"
+  },
+  "homepage": "https://github.com/acavalla/belarus#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

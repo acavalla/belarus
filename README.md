@@ -24,4 +24,3 @@ I want to use shortcodes like `:fire:` that get converted into emojis like 🔥
 TO DO
 
 - User story 4
-- Submitted notes to be styled
