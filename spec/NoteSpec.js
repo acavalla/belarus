@@ -1,4 +1,7 @@
 // test
 let note = new Note('test');
 // expectEqualMatcher(sum(1,2), 3)
-expectEqualMatcher(note.text(), 'test')
+
+describe('creating a new note', function() {expectEqualMatcher(note.text(), 'test')})
+
+
