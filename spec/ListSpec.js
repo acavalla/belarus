@@ -1,10 +1,26 @@
 let list;
 list = new List();
-list.createNote('test')
+let notey = list.createNote('test')
 list.createNote('testnewest')
 
-describe('should show the first note once created', function() {expectEqualMatcher(list.showNotes()[0], 'test')})
-describe('should print all notes', function() {expectEqualMatcher(list.showNotes().length, 2)})
+describe('showNotes', function() {
+  it('returns the first note', function() {
+    expectEqualMatcher(list.showNotes()[0].text(), 'test')
+  })
 
-describe('should print the newest note', function() {expectEqualMatcher(list.newestNote(), 'testnewest')})
+  it('stores in an array', function() {
+    expectEqualMatcher(list.showNotes().length, 2)
+  })
 
+  it('stores in an array', function() {
+    console.log(list.showNotes())
+    console.log(notey.text())
+    include(list.showNotes(), notey)
+  })
+})
+
+describe('newestNote', function() {
+  it('should print the newest note', function() {
+    expectEqualMatcher(list.newestNote().text(), 'testnewest')
+  })
+})

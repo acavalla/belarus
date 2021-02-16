@@ -6,6 +6,7 @@ class List {
   createNote = text => {
     let note = new Note(text);
     this._allNotes.push(note)
+    return note
   }
 
   showNotes = () => this._allNotes
