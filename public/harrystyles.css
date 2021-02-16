@@ -2,7 +2,7 @@
     width: 500px;
     height: 400px;
     background-color: black;
-    color: white;
+    color: #f8f8ff;
     font-family: cursive;
     font-size: 34px;
     border-color: white;
@@ -11,7 +11,8 @@
 
 header {
   height: auto;
-  font-family:cursive;
+  color: #f8f8ff;
+  font-family: 'Parisienne', cursive;
   font-size: 64px;
   text-shadow: 6px 6px #555;
 }
@@ -28,17 +29,18 @@ textarea {
   overflow:auto;
 
   font-size: 24px;
+  font-family: 'Parisienne', cursive;
 }
 
 body {
   background-color: #222;
-  color: white;
+  color: #f8f8ff;
   text-align: center;
 }
 
 #list-all {
   margin-top: 12px;
-  font-family:cursive;
+  font-family: 'Parisienne', cursive;
   font-size:36px;
 }
 
@@ -49,8 +51,7 @@ body {
  position: relative;
 }
 .marquee h3 {
-  font-family:cursive;
-  font-weight:600;
+  font-family: 'Parisienne', cursive;
   font-size:48px;
  position: absolute;
  width: 100%;
