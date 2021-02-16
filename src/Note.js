@@ -10,4 +10,6 @@ class Note {
   text(){
     return this._text;
   }
+
+
 }
