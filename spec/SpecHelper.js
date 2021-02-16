@@ -6,3 +6,8 @@ expectEqualMatcher = function(a, b) {
     console.log(`Expected ${a} but got ${b}`)
   }
 }
+
+const describe = (desc, fn) => {
+  console.log(desc)
+  fn()
+}
