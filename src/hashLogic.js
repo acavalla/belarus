@@ -16,5 +16,5 @@ function getNoteFromUrl(location) {
 function showNote(note) {
   document
     .getElementById("printed-note")
-    .innerHTML = note;
+    .innerHTML = note.text();
 };
