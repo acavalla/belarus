@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample page</title>
+  </head>
+  <body>
+    <div id="main">
+    </div>
+
+    <script>
+      function getPostData() {
+        // Hardcode the post data for now.
+        return fetch("https://emoji-api.com/emojis/fire?access_key=139e54a1fae0a9ad94e027219da64d2fedc7dde6 ").then(response => {
+          return response.json();
+        })
+      }
+
+      function renderPost(postData) {
+        return postData[0]["character"];
+        // let postHeadingHTML = `<h1>${postData.title}</h1>`;
+        // let postWithLinebreaksHTML = postData.body.replaceAll("\n", "<br>\n");
+        // let postBodyHTML = `<p>${postWithLinebreaksHTML}</p>`;
+        // return `${postHeadingHTML}${postBodyHTML}`;
+      }
+
+      getPostData().then(post => {
+          let rendered = renderPost(post);
+          document.getElementById("main").innerHTML = rendered;
+        })
+
+    </script>
+  </body>
+</html>
+
+<!--
+API: 139e54a1fae0a9ad94e027219da64d2fedc7dde6
+https://emoji-api.com/emojis?access_key=139e54a1fae0a9ad94e027219da64d2fedc7dde6 -->

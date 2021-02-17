@@ -9,7 +9,6 @@ function showNoteForCurrentPage() {
 };
 
 function getNoteFromUrl(location) {
-  console.log(location)
   a = location.hash.split("#")[1];
   return list.showNotes()[a - 1];
 };
