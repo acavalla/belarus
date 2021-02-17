@@ -12,7 +12,10 @@ class Note {
   }
 
   abbreviate(){
-    return this._text.substring(0,5);
+    if(this._text.length > 20) {
+      return this._text.substring(0,20) + "...";
+    } else {
+      return this._text
+    }
   }
-
 }
