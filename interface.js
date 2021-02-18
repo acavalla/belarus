@@ -1,12 +1,13 @@
 let allNotes = document.querySelector('#list-all');
-let list = new List();
 let textarea = document.querySelector('#stupidnote')
 let submitButton = document.getElementById('submit-button')
-
+let list;
 
 showNotes = () => {
+  allNotes.innerHTML = ''
   let i = list.showNotes().length;
-  allNotes.innerHTML += `<a href=#${i}>` + list.newestNote().abbreviate() + "</a><br>";
+  list.showNotes().forEach(x =>
+  allNotes.innerHTML += `<a href=#${i}>` + x.abbreviate() + "</a><br>");
 }
 
 
@@ -22,6 +23,9 @@ submitButton.addEventListener("click", () => {
   });
 })
 
-let localList = localStorage.getItem('list')
-let notes = JSON.parse(localList)
-notes.forEach(note => list.createNote(note._text))
+if(localStorage.length > 0) {
+  list = new List();
+  let localList = localStorage.getItem('list')
+  let notes = JSON.parse(localList)
+  notes.forEach(note => list.createNote(note._text))
+} else { list = new List(); }
