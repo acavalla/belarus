@@ -10,7 +10,18 @@ showNotes = () => {
 
 
 document.getElementById('submit-button').addEventListener("click", () => {
-  list.createNote(document.getElementById('stupidnote').value)
+  let text = document.getElementById('stupidnote').value
+
+  rendered = getPostData(text).then(post => {
+    let rendered = renderPost(post);
+    document.getElementById("emoji").innerHTML = rendered;
+    console.log(rendered);
+    list.createNote(rendered);
+    return rendered;
+  })
+  console.log(rendered.PromiseResult)
+
+
   textarea.value = '';
   showNotes()
 })

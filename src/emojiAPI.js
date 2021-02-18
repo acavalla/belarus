@@ -14,14 +14,8 @@ function getPostData(text) {
 function renderPost(postData) {
   console.log(postData["emojified_text"]);
   console.log(postData.emojified_text);
-  return postData.emojified_text;
+  return `<h1>${postData.emojified_text}</h1>`;
 }
 
-function emojiPost(text) {
-  getPostData(text).then(post => {
-    let rendered = renderPost(post);
-    document.getElementById("emoji").innerHTML = rendered;
-    console.log(rendered);
-    return rendered;
-  })
-}
+
+  
