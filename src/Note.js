@@ -23,10 +23,11 @@ class Note {
   emojiSub(){
     // var input = this._text
     // var regex = /:([\w]+):/g
-    // console.log(emojiPost('fire'))
-    // var replaced = input.replace(regex, emojiPost('fire'))
+    // // console.log(emojiPost('fire'))
+    // var replaced = input.replace(":" + regex + ":", emojiPost('fire'))
     // console.log(replaced)
     // this._text = replaced
     // return this._text
+    let emoji_text = emojiPost(this._text)
   }
 }

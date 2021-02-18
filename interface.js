@@ -5,7 +5,7 @@ let textarea = document.querySelector('#stupidnote')
 
 showNotes = () => {
   let i = list.showNotes().length;
-  allNotes.innerHTML += `<a href=#${i}>` + list.newestNote().abbreviate() + "</a><br>" + emojiPost('fire');
+  allNotes.innerHTML += `<a href=#${i}>` + list.newestNote().emojiSub() + "</a><br>" + emojiPost('fire');
 }
 
 

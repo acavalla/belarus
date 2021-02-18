@@ -1,22 +1,27 @@
-function getPostData(emoji) {
+function getPostData(text) {
   // Hardcode the post data for now.
-  return fetch("https://emoji-api.com/emojis/" + emoji + "?access_key=" + API_KEY).then(response => {
+  return fetch("https://makers-emojify.herokuapp.com/", {
+  body: "{\"text\": \"Hello, :fire:\"}",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  method: "POST"
+}).then(response => {
     return response.json();
   })
 }
 
 function renderPost(postData) {
-  // console.log(postData)
-  return postData[0]["character"];
+  console.log(postData["emojified_text"])
+
+  return postData["emojified_text"];
 }
 
-function emojiPost(emoji) {
-  getPostData(emoji).then(post => {
+function emojiPost(text) {
+  getPostData(text).then(post => {
     let rendered = renderPost(post);
     // document.getElementById("emoji").innerHTML = rendered;
-    console.log(rendered)
-    return rendered
+    // console.log(rendered)
+    return rendered;
   })
 }
-
-// emojiPost('skull')
