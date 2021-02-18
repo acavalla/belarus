@@ -7,15 +7,18 @@ function getPostData(text) {
   },
   method: "POST"
 }).then(response => {
-    return response.json();
+    return response.json().then(post => {
+      let rendered = renderPost(post);
+      // document.getElementById("list-all").innerHTML += rendered;
+      console.log(rendered);
+      // list.createNote(rendered);
+      return rendered;
   })
-}
+})
 
 function renderPost(postData) {
   console.log(postData["emojified_text"]);
   console.log(postData.emojified_text);
-  return `<h1>${postData.emojified_text}</h1>`;
+  return `<a>${postData.emojified_text}</a>`;
 }
-
-
-  
+}

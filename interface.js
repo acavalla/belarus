@@ -5,21 +5,25 @@ let textarea = document.querySelector('#stupidnote')
 
 showNotes = () => {
   let i = list.showNotes().length;
-  allNotes.innerHTML += `<a href=#${i}>` + list.newestNote().abbreviate() + "</a><br>";
+  allNotes.innerHTML += `<a href=#${i}>` + list.newestNote() + "</a><br>";
 }
 
 
 document.getElementById('submit-button').addEventListener("click", () => {
   let text = document.getElementById('stupidnote').value
-
-  rendered = getPostData(text).then(post => {
-    let rendered = renderPost(post);
-    document.getElementById("emoji").innerHTML = rendered;
-    console.log(rendered);
-    list.createNote(rendered);
-    return rendered;
+  html = getPostData(text)
+  // rendered = getPostData(text).then(post => {
+  //   let rendered = renderPost(post);
+  //   document.getElementById("emoji").innerHTML = rendered;
+  //   console.log(rendered);
+  //   list.createNote(rendered);
+  //   return rendered;
+  // })
+  console.log(html)
+  html.then(a => {
+    console.log(a)
+    list.createNote(a.emojified_text)
   })
-  console.log(rendered.PromiseResult)
 
 
   textarea.value = '';
