@@ -5,7 +5,7 @@
 class Note {
   constructor(text){
     this._text = text;
-    this.emojiSub();
+    // this.emojiSub();
   }
 
   text(){
@@ -28,6 +28,10 @@ class Note {
     // console.log(replaced)
     // this._text = replaced
     // return this._text
-    let emoji_text = emojiPost(this._text)
+    let emojiText = emojiPost(this._text)
+    console.log(this._text)
+    console.log(emojiPost(this._text))
+    console.log(emojiText);
+    return emojiText;
   }
 }
