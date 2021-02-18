@@ -30,17 +30,3 @@ function getEmojiData(text) {
       method: "POST"
     })
 }
-
-  // html = getPostData(text)
-  // rendered = getPostData(text).then(post => {
-  //   let rendered = renderPost(post);
-  //   document.getElementById("emoji").innerHTML = rendered;
-  //   console.log(rendered);
-  //   list.createNote(rendered);
-  //   return rendered;
-  // })
-  // console.log(html)
-  // html.then(a => {
-  //   console.log(a)
-  //   list.createNote(a.emojified_text)
-  // })
