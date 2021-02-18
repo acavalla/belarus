@@ -20,7 +20,7 @@ class Note {
     }
   }
 
-  emojiSub(){
+  // emojiSub(){
     // var input = this._text
     // var regex = /:([\w]+):/g
     // // console.log(emojiPost('fire'))
@@ -28,10 +28,10 @@ class Note {
     // console.log(replaced)
     // this._text = replaced
     // return this._text
-    let emojiText = emojiPost(this._text)
-    console.log(this._text)
-    console.log(emojiPost(this._text))
-    console.log(emojiText);
-    return emojiText;
-  }
+  //   let emojiText = emojiPost(this._text)
+  //   console.log(this._text)
+  //   console.log(emojiPost(this._text))
+  //   console.log(emojiText);
+  //   return emojiText;
+  // }
 }
