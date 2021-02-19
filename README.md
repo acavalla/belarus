@@ -19,8 +19,5 @@ As a programmer
 So I can record notes with fun little pictures
 I want to use shortcodes like `:fire:` that get converted into emojis like 🔥
 ```
-
-
-TO DO
-
-- User story 4
+To run:
+`open public/index.html`

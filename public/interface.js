@@ -6,8 +6,8 @@ let list;
 showNotes = () => {
   allNotes.innerHTML = ''
   let i = list.showNotes().length;
-  list.showNotes().forEach(x =>
-  allNotes.innerHTML += `<a href=#${i}>` + x.abbreviate() + "</a><br>");
+  list.showNotes().forEach((x, index) =>
+  allNotes.innerHTML += `<a href=#${index + 1}>` + x.abbreviate() + "</a><br>");
 }
 
 
@@ -29,3 +29,5 @@ if(localStorage.length > 0) {
   let notes = JSON.parse(localList)
   notes.forEach(note => list.createNote(note._text))
 } else { list = new List(); }
+
+showNotes()
