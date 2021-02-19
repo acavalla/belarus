@@ -14,6 +14,8 @@ function getNoteFromUrl(location) {
 };
 
 function showNote(note) {
+  a = window.location.hash.split("#")[1];
+    console.log(a)
   document
     .getElementById("printed-note")
     .innerHTML = '<div class="print">' + note.text() + '</div>';
