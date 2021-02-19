@@ -1,7 +1,7 @@
 let list;
 list = new List();
 let notey = list.createNote('test')
-list.createNote('testnewest')
+let notey2 = list.createNote('testnewest')
 
 describe('showNotes', function() {
   it('returns the first note', function() {
@@ -22,5 +22,13 @@ describe('showNotes', function() {
 describe('newestNote', function() {
   it('should print the newest note', function() {
     expectEqualMatcher(list.newestNote().text(), 'testnewest')
+  })
+})
+
+describe('deleteNote', function() {
+  it('should delete a note', function() {
+    list.deleteNote(1)
+    expectEqualMatcher(list.showNotes().length, 1)
+    expectEqualMatcher(list.showNotes()[0]._text, "test")
   })
 })

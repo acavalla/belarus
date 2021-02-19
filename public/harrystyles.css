@@ -81,6 +81,17 @@ input[type='button'] {
 
 }
 
+button {
+border: none;
+border-radius: 60%;
+color: #1b1818;
+padding: 5px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 8px;
+background-color: ghostwhite;
+}
 .marquee {
  height: 50px;
  overflow: hidden;

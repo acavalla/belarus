@@ -7,7 +7,7 @@ showNotes = () => {
   allNotes.innerHTML = ''
   let i = list.showNotes().length;
   list.showNotes().forEach((x, index) =>
-  allNotes.innerHTML += `<a href=#${index + 1}>` + x.abbreviate() + `<button id=${index + 1}>X</button>` + "</a><br>");
+  allNotes.innerHTML += `<a href=#${index + 1}>` + x.abbreviate() + ` <button id=${index + 1} onClick=list.deleteNote(${index})>X</button>` + "</a><br>");
 }
 
 
@@ -21,6 +21,11 @@ submitButton.addEventListener("click", () => {
       textarea.value = '';
     })
   });
+})
+
+document.addEventListener("click", () => {
+  localStorage.setItem('list', JSON.stringify(list.showNotes()));
+  showNotes()
 })
 
 if(localStorage.length > 0) {
