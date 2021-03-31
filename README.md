@@ -20,4 +20,4 @@ So I can record notes with fun little pictures
 I want to use shortcodes like `:fire:` that get converted into emojis like 🔥
 ```
 To run:
-`open public/index.html`
+Clone the repo and run `open public/index.html`
