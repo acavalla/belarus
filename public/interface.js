@@ -12,6 +12,7 @@ displayNotes = () => {
 
 
 submitButton.addEventListener("click", () => {
+  if(textarea.value.length == 0) { return }
   getEmojiData(textarea.value).then(response => {
     response.json().then(emojiData => {
       let emojiText = emojiData.emojified_text;
