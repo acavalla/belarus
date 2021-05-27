@@ -3,10 +3,10 @@ let textarea = document.querySelector('#stupidnote')
 let submitButton = document.getElementById('submit-button')
 let list;
 
-showNotes = () => {
+displayNotes = () => {
   allNotes.innerHTML = ''
   let i = list.showNotes().length;
-  list.showNotes().forEach((x, index) =>
+  list.showNotes().reverse().forEach((x, index) =>
   allNotes.innerHTML += `<a href=#${index + 1}>` + x.abbreviate() + ` <button id=${index + 1} onClick=list.deleteNote(${index})>X</button>` + "</a><br>");
 }
 
@@ -17,15 +17,15 @@ submitButton.addEventListener("click", () => {
       let emojiText = emojiData.emojified_text;
       list.createNote(emojiText)
       localStorage.setItem('list', JSON.stringify(list.showNotes()));
-      showNotes()
+      displayNotes()
       textarea.value = '';
     })
   });
 })
 
-document.addEventListener("click", () => {
+submitButton.addEventListener("click", () => {
   localStorage.setItem('list', JSON.stringify(list.showNotes()));
-  showNotes()
+  displayNotes()
 })
 
 if(localStorage.length > 0) {
@@ -35,4 +35,4 @@ if(localStorage.length > 0) {
   notes.forEach(note => list.createNote(note._text))
 } else { list = new List(); }
 
-showNotes()
+displayNotes()
