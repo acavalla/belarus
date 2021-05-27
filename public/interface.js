@@ -3,30 +3,29 @@ let textarea = document.querySelector('#stupidnote')
 let submitButton = document.getElementById('submit-button')
 let list;
 
-displayNotes = () => {
+showNotes = () => {
   allNotes.innerHTML = ''
   let i = list.showNotes().length;
-  list.showNotes().reverse().forEach((x, index) =>
+  list.showNotes().forEach((x, index) =>
   allNotes.innerHTML += `<a href=#${index + 1}>` + x.abbreviate() + ` <button id=${index + 1} onClick=list.deleteNote(${index})>X</button>` + "</a><br>");
 }
 
 
 submitButton.addEventListener("click", () => {
-  if(textarea.value.length == 0) { return }
   getEmojiData(textarea.value).then(response => {
     response.json().then(emojiData => {
       let emojiText = emojiData.emojified_text;
       list.createNote(emojiText)
       localStorage.setItem('list', JSON.stringify(list.showNotes()));
-      displayNotes()
+      showNotes()
       textarea.value = '';
     })
   });
 })
 
-submitButton.addEventListener("click", () => {
+document.addEventListener("click", () => {
   localStorage.setItem('list', JSON.stringify(list.showNotes()));
-  displayNotes()
+  showNotes()
 })
 
 if(localStorage.length > 0) {
@@ -36,4 +35,4 @@ if(localStorage.length > 0) {
   notes.forEach(note => list.createNote(note._text))
 } else { list = new List(); }
 
-displayNotes()
+showNotes()
